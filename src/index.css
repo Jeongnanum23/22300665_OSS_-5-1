@@ -1,13 +1,253 @@
-body {
+/* 기본적인 리셋 */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  border-color: #3498db;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+/* ListPage 스타일링 */
+.friend-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.friend-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+}
+
+.friend-item h2 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.friend-item p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.friend-item .friend-links {
+  margin-top: 15px;
+}
+
+.friend-item .friend-links a {
+  margin-right: 10px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.friend-item .friend-links a:hover {
+  text-decoration: underline;
+}
+
+/* CreatePage 스타일링 */
+.create-page {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.create-page .form-group {
+  margin-bottom: 20px;
+}
+
+.create-page label {
+  margin-bottom: 5px;
+}
+
+.create-page input {
+  font-size: 1rem;
+}
+
+.create-page .form-group:last-child {
+  text-align: center;
+}
+
+.create-page button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+/* UpdatePage 스타일링 */
+.update-page {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.update-page .form-group {
+  margin-bottom: 20px;
+}
+
+.update-page label {
+  margin-bottom: 5px;
+}
+
+.update-page input {
+  font-size: 1rem;
+}
+
+.update-page .form-group:last-child {
+  text-align: center;
+}
+
+.update-page p {
+  font-size: 1.1rem;
+  color: #3498db;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.update-page button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* DetailPage 스타일링 */
+.detail-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* 친구 정보 구분을 위한 카드 형태 */
+.friend-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+  border-top: 2px solid #3498db;
+  padding-top: 20px;
+}
+
+.friend-info div {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f4f6f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.friend-info div span {
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* 각 항목의 값 강조 스타일 */
+.friend-info div p {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* 친구의 정보 구분 */
+.friend-info div:nth-child(even) {
+  background-color: #ecf1f5;
+}
+
+.friend-info div:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+
+.friend-info .friend-details {
+  margin-top: 20px;
+}
+
+.friend-info .friend-details span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.friend-info .friend-details p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
 }

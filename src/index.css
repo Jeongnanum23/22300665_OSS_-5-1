@@ -1,4 +1,4 @@
-/* 기본적인 리셋 */
+
 * {
   margin: 0;
   padding: 0;
@@ -57,7 +57,7 @@ form {
   margin-top: 20px;
 }
 
-/* ListPage 스타일링 */
+
 .friend-list {
   display: flex;
   flex-wrap: wrap;
@@ -99,7 +99,6 @@ form {
   text-decoration: underline;
 }
 
-/* CreatePage 스타일링 */
 .create-page {
   max-width: 500px;
   margin: 50px auto;
@@ -137,7 +136,7 @@ form {
   font-size: 1.1rem;
 }
 
-/* UpdatePage 스타일링 */
+
 .update-page {
   max-width: 500px;
   margin: 50px auto;
@@ -183,7 +182,7 @@ form {
   margin-top: 10px;
 }
 
-/* DetailPage 스타일링 */
+
 .detail-page {
   max-width: 600px;
   margin: 50px auto;
@@ -200,7 +199,7 @@ form {
   margin-bottom: 20px;
 }
 
-/* 친구 정보 구분을 위한 카드 형태 */
+
 .friend-info {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -221,13 +220,13 @@ form {
   color: #3498db;
 }
 
-/* 각 항목의 값 강조 스타일 */
+
 .friend-info div p {
   font-size: 1.2rem;
   color: #2c3e50;
 }
 
-/* 친구의 정보 구분 */
+
 .friend-info div:nth-child(even) {
   background-color: #ecf1f5;
 }

@@ -17,7 +17,7 @@ function DetailPage() {
     <div style={{ padding: "20px" }}>
       <h1 style={{ fontWeight: "bold", textAlign: "center", marginBottom: "20px" }}>Detail Page</h1>
       
-      {/* 테이블 스타일 추가 */}
+      
       <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
         <thead>
           <tr>
